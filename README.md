@@ -25,7 +25,7 @@ The backend GitHub repository can be found here:
 
 
 ## Admin Features
-
+**Admin access : username = Admin and password=Admin**
 The admin page provides functionalities to:
 
 1. **Create Train**: Add a new train with details such as train name, source, destination, seat capacity, and arrival times.
