@@ -78,7 +78,7 @@ const HomePage = () => {
             setbookingloading(true)
             try {
                 
-                const data = await axios.post(`${Main_url}/train/api/trains/${selectedTrain?._id}/book`,{},{ withCredentials: true })
+                const data = await axios.post(`${Main_url}/train/api/trains/${selectedTrain?._id}/book`,{no_of_seats:noOfSeats},{ withCredentials: true })
                 const result = data.data
                 tost({
                     title: 'Seat Booked.',
