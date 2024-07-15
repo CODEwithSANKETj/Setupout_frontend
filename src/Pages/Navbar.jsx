@@ -26,7 +26,7 @@ const Navbar = ({ rendernav }) => {
     try {
       const result = await axios.post(`${Main_url}/user/api/logout`, {}, { withCredentials: true });
       localStorage.removeItem('Railway_auth');
-      <Navigate to='/login' replace={true}/>
+      navigate('/')
       window.location.reload()
       
     } catch (error) {
