@@ -64,6 +64,13 @@ import { Navigate, useNavigate } from 'react-router-dom';
           
         
       } catch (error) {
+        tost({
+          title: error?.response?.data?.err ? 'Failed signup' :'Something went wrong',
+          description: error?.response?.data?.err ? error?.response?.data?.err :'Something went wrong',
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
         setloading(false)
         console.log(error)
       }
@@ -107,6 +114,13 @@ import { Navigate, useNavigate } from 'react-router-dom';
         
       } catch (error) {
         setloading(false)
+        tost({
+          title: error?.response?.data?.err ? 'Failed signup' :'Something went wrong',
+          description: error?.response?.data?.err ? error?.response?.data?.err :'Something went wrong',
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
         console.log(error)
       }
     };
