@@ -9,7 +9,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import { NavLink, Link as RouterLink, useNavigate } from 'react-router-dom';
+import { NavLink, Navigate, Link as RouterLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 const Main_url = import.meta.env.VITE_API_URL;
 const Navbar = ({ rendernav }) => {
@@ -26,8 +26,8 @@ const Navbar = ({ rendernav }) => {
     try {
       const result = await axios.post(`${Main_url}/user/api/logout`, {}, { withCredentials: true });
       localStorage.removeItem('Railway_auth');
-      <NavLink to='/login'/>
-      window.location.reload()
+      <Navigate to='/login' replace={true}/>
+      // window.location.reload()
       
     } catch (error) {
       console.error('Error logging out:', error);
